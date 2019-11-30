@@ -13,6 +13,7 @@ public class Student {
     public Student(String name) {
         this.name = name;
         this.assignmentScores = new ArrayList<>();
+        this.examScores = new ArrayList<>();
     }
 
     public void addAssignmentScore(double score) {
@@ -21,5 +22,13 @@ public class Student {
 
     public void addExamScore(double score) {
         this.examScores.add(score);
+    }
+
+    public double getAverage(AverageStrategy averageStrategy) {
+        return averageStrategy.computeAverage(assignmentScores, examScores);
+    }
+
+    public String toString() {
+        return "name: " + name;
     }
 }
