@@ -19,4 +19,12 @@ public class Roster {
     public void addStudent(Student student) {
         this.students.add(student);
     }
+
+    public AvgDispenser getAverageIterator() {
+        List<Double> averages = new ArrayList<>();
+        for (Student student: students) {
+            averages.add(student.getAverage());
+        }
+        return new AverageIterator(averages);
+    }
 }

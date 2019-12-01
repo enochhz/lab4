@@ -44,7 +44,8 @@ public class Student {
     }
 
     public double getAverage() {
-        return averageStrategy.computeAverage(assignmentScores, examScores);
+        String stringAverage = String.format("%.2f", averageStrategy.computeAverage(assignmentScores, examScores));
+        return Double.valueOf(stringAverage);
     }
 
     public String toString() {
