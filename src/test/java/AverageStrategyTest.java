@@ -16,21 +16,24 @@ public class AverageStrategyTest {
 
     @Test
     public void testNormalAverageStrategy() {
-        double average = student.getAverage(new NormalAverageStrategy());
+        student.setAverageStrategy(new NormalAverageStrategy());
+        double average = student.getAverage();
         System.out.println(average);
         Assert.assertTrue(false);
     }
 
     @Test
     public void testDropAssignmentAverageStrategy() {
-        double average = student.getAverage(new DropAssignmentAverageStrategy());
+        student.setAverageStrategy(new DropAssignmentAverageStrategy());
+        double average = student.getAverage();
         System.out.println(average);
         Assert.assertTrue(false);
     }
 
     @Test
     public void testNormalAverageStrategy2() {
-        double average = student.getAverage(new NormalAverageStrategy());
+        student.setAverageStrategy(new NormalAverageStrategy());
+        double average = student.getAverage();
         System.out.println(average);
         Assert.assertTrue(false);
     }
