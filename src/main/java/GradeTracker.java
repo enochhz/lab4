@@ -12,13 +12,13 @@ public class GradeTracker {
     }
 
     public String getGrade() {
-        if (average >= 0.9) {
+        if (average >= 90) {
             return "A";
-        } else if (average >= 0.8) {
+        } else if (average >= 80) {
             return "B";
-        } else if (average >= 0.7) {
+        } else if (average >= 70) {
             return "C";
-        } else if (average >= 0.6) {
+        } else if (average >= 70) {
             return "D";
         } else {
             return "F";

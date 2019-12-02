@@ -11,8 +11,8 @@ public class NormalAverageStrategy implements  AverageStrategy{
         for (Double score: exams) {
             totalExamScores += score;
         }
-        double result = (totalAssignmentScores / (assignments.size() * 100)) * 0.4
-                + (totalExamScores / (exams.size() * 100)) * 0.6;
+        double result = (totalAssignmentScores / (assignments.size() * 100)) * 40
+                + (totalExamScores / (exams.size() * 100)) * 60;
         return result;
     }
 }

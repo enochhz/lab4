@@ -5,8 +5,11 @@ public class AverageIterator  implements AvgDispenser{
     private List<Double> averages;
     private int next;
 
-    public AverageIterator(List<Double> averages) {
-        this.averages = averages;
+    public AverageIterator(List<Student> students) {
+        averages = new ArrayList<>();
+        for (Student student: students) {
+            averages.add(student.getAverage());
+        }
         this.next = 0;
     }
 

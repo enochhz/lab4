@@ -10,7 +10,7 @@ public class AverageIteratorTest {
         Student student1 = new Student("David");
         student1.addAssignmentScore(0);
         student1.addAssignmentScore(100);
-        student1.addAssignmentScore(0);
+        student1.addAssignmentScore(50);
         student1.addExamScore(100);
         student1.addExamScore(100);
         roster.addStudent(student1);
@@ -26,9 +26,11 @@ public class AverageIteratorTest {
     @Test
     public void testAverageIterator() {
         AvgDispenser averageIterator = roster.getAverageIterator();
-        while (averageIterator.hasNext()) {
-            System.out.println(averageIterator.next());
-        }
-        Assert.assertTrue(false);
+        Double average = averageIterator.next();
+        System.out.println(average);
+        Assert.assertTrue(average == 80);
+        average = averageIterator.next();
+        System.out.println(average);
+        Assert.assertTrue(average == 100);
     }
 }

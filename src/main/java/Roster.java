@@ -2,9 +2,9 @@ import java.util.*;
 
 public class Roster {
 
-    public String courseName;
-    public String courseNumber;
-    public List<Student> students;
+    private String courseName;
+    private String courseNumber;
+    private List<Student> students;
 
     public static void main(String[] args) {
         System.out.println("Test");
@@ -21,10 +21,6 @@ public class Roster {
     }
 
     public AvgDispenser getAverageIterator() {
-        List<Double> averages = new ArrayList<>();
-        for (Student student: students) {
-            averages.add(student.getAverage());
-        }
-        return new AverageIterator(averages);
+        return new AverageIterator(students);
     }
 }

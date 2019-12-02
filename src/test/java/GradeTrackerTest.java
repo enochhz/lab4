@@ -18,8 +18,9 @@ public class GradeTrackerTest {
 
     @Test
     public void testGradeTracker() {
-        System.out.println(gradeTracker.getGrade());
-        Assert.assertTrue(false);
+        String grade = gradeTracker.getGrade();
+        System.out.println(grade);
+        Assert.assertTrue(grade == "B");
     }
 
     @Test
@@ -31,7 +32,8 @@ public class GradeTrackerTest {
         student.addAssignmentScore(100);
         student.addAssignmentScore(100);
         student.addAssignmentScore(100);
-        System.out.println(gradeTracker.getGrade());
-        Assert.assertTrue(false);
+        String grade = gradeTracker.getGrade();
+        System.out.println(grade);
+        Assert.assertTrue(grade == "A");
     }
 }

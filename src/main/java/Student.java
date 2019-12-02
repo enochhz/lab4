@@ -8,10 +8,6 @@ public class Student {
     private AverageStrategy averageStrategy;
     private GradeTracker gradeTracker;
 
-    public static void main(String[] args) {
-        System.out.println("test");
-    }
-
     public Student(String name) {
         this.name = name;
         this.assignmentScores = new ArrayList<>();
@@ -46,9 +42,5 @@ public class Student {
     public double getAverage() {
         String stringAverage = String.format("%.2f", averageStrategy.computeAverage(assignmentScores, examScores));
         return Double.valueOf(stringAverage);
-    }
-
-    public String toString() {
-        return "name: " + name;
     }
 }
