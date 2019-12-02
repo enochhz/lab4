@@ -31,7 +31,7 @@ public class Student {
 
     private void notifyObserver() {
         if (gradeTracker != null) {
-            gradeTracker.updateGrade(getAverage());
+            gradeTracker.updateStudent(this);
         }
     }
 

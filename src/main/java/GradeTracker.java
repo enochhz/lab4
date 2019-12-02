@@ -1,17 +1,18 @@
 public class GradeTracker {
 
-    private double average;
+    private Student student;
 
     public GradeTracker(Student student) {
-        this.average = student.getAverage();
+        this.student = student;
         student.setGradeTracker(this);
     }
 
-    public void updateGrade(double average) {
-        this.average = average;
+    public void updateStudent(Student student) {
+        this.student = student;
     }
 
     public String getGrade() {
+        double average = student.getAverage();
         if (average >= 90) {
             return "A";
         } else if (average >= 80) {
